@@ -76,6 +76,7 @@ namespace EasyAbp.CacheManagementDemo.Web
             var hostingEnvironment = context.Services.GetHostingEnvironment();
             var configuration = context.Services.GetConfiguration();
 
+            ConfigureRedis(context, configuration);
             ConfigureUrls(configuration);
             ConfigureAuthentication(context, configuration);
             ConfigureAutoMapper();
@@ -84,6 +85,14 @@ namespace EasyAbp.CacheManagementDemo.Web
             ConfigureNavigationServices();
             ConfigureAutoApiControllers();
             ConfigureSwaggerServices(context.Services);
+        }
+
+        private void ConfigureRedis(ServiceConfigurationContext context, IConfiguration configuration)
+        {
+            context.Services.AddStackExchangeRedisCache(options =>
+            {
+                options.Configuration = configuration["Redis:Configuration"];
+            });
         }
 
         private void ConfigureUrls(IConfiguration configuration)
