@@ -261,3 +261,4 @@ src/EasyAbp.CacheManagementDemo.DbMigrator/Logs/*
 
 /src/EasyAbp.CacheManagementDemo.Web/wwwroot/libs/
 /src/EasyAbp.CacheManagementDemo.Web/package-lock.json
+/src/EasyAbp.CacheManagementDemo.Web/yarn.lock

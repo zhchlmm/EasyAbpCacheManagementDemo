@@ -1,4 +1,4 @@
-﻿using EasyAbp.CacheManagement;
+using EasyAbp.CacheManagement;
 using Volo.Abp.Account;
 using Volo.Abp.AutoMapper;
 using Volo.Abp.FeatureManagement;
@@ -6,6 +6,8 @@ using Volo.Abp.Identity;
 using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.TenantManagement;
+using Volo.Blogging;
+using Volo.Blogging.Admin;
 
 namespace EasyAbp.CacheManagementDemo
 {
@@ -19,6 +21,8 @@ namespace EasyAbp.CacheManagementDemo
         typeof(CacheManagementApplicationModule),
         typeof(AbpFeatureManagementApplicationModule)
         )]
+    [DependsOn(typeof(BloggingApplicationModule))]
+    [DependsOn(typeof(BloggingAdminApplicationModule))]
     public class CacheManagementDemoApplicationModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)

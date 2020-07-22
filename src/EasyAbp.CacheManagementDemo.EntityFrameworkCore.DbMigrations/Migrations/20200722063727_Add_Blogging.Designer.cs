@@ -4,15 +4,17 @@ using EasyAbp.CacheManagementDemo.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Volo.Abp.EntityFrameworkCore;
 
 namespace EasyAbp.CacheManagementDemo.Migrations
 {
     [DbContext(typeof(CacheManagementDemoMigrationsDbContext))]
-    partial class CacheManagementDemoMigrationsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200722063727_Add_Blogging")]
+    partial class Add_Blogging
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

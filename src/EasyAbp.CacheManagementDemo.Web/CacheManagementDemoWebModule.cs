@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using Localization.Resources.AbpUi;
 using Microsoft.AspNetCore;
@@ -37,6 +37,9 @@ using Volo.Abp.UI.Navigation;
 using Volo.Abp.VirtualFileSystem;
 using EasyAbp.CacheManagement.Web;
 using EasyAbp.CacheManagement;
+using Microsoft.Extensions.DependencyInjection;
+using Volo.Blogging;
+using Volo.Blogging.Admin;
 
 namespace EasyAbp.CacheManagementDemo.Web
 {
@@ -53,6 +56,8 @@ namespace EasyAbp.CacheManagementDemo.Web
         typeof(CacheManagementWebModule),
         typeof(AbpAspNetCoreSerilogModule)
         )]
+    [DependsOn(typeof(BloggingWebModule))]
+    [DependsOn(typeof(BloggingAdminWebModule))]
     public class CacheManagementDemoWebModule : AbpModule
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)
@@ -88,10 +93,11 @@ namespace EasyAbp.CacheManagementDemo.Web
 
         private void ConfigureRedis(ServiceConfigurationContext context, IConfiguration configuration)
         {
-            context.Services.AddStackExchangeRedisCache(options =>
-            {
-                options.Configuration = configuration["Redis:Configuration"];
-            });
+            // EasyAbp CacheManagement module requires redis
+            //context.Services.AddStackExchangeRedisCache(options =>
+            //{
+            //    options.Configuration = configuration["Redis:Configuration"];
+            //});
         }
 
         private void ConfigureUrls(IConfiguration configuration)

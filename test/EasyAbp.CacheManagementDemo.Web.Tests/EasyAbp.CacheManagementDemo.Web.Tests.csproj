@@ -17,7 +17,7 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
     <ProjectReference Include="..\EasyAbp.CacheManagementDemo.Application.Tests\EasyAbp.CacheManagementDemo.Application.Tests.csproj" />
     <ProjectReference Include="..\..\src\EasyAbp.CacheManagementDemo.Web\EasyAbp.CacheManagementDemo.Web.csproj" />
-    <PackageReference Include="Volo.Abp.AspNetCore.TestBase" Version="2.9.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.TestBase" Version="3.0.4" />
   </ItemGroup>
 
   <ItemGroup>

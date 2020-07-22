@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Volo.Abp.Http.Client.IdentityModel" Version="2.9.0" />
+    <PackageReference Include="Volo.Abp.Http.Client.IdentityModel" Version="3.0.4" />
     <ProjectReference Include="..\..\src\EasyAbp.CacheManagementDemo.HttpApi.Client\EasyAbp.CacheManagementDemo.HttpApi.Client.csproj" />
   </ItemGroup>
   

@@ -1,4 +1,4 @@
-﻿using EasyAbp.CacheManagement.EntityFrameworkCore;
+using EasyAbp.CacheManagement.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
@@ -10,6 +10,7 @@ using Volo.Abp.IdentityServer.EntityFrameworkCore;
 using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
+using Volo.Blogging.EntityFrameworkCore;
 
 namespace EasyAbp.CacheManagementDemo.EntityFrameworkCore
 {
@@ -46,6 +47,7 @@ namespace EasyAbp.CacheManagementDemo.EntityFrameworkCore
             builder.ConfigureCacheManagement();
 
             builder.ConfigureCacheManagementDemo();
+            builder.ConfigureBlogging();
         }
     }
 }

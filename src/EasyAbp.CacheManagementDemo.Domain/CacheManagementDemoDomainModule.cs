@@ -1,4 +1,4 @@
-﻿using EasyAbp.CacheManagement;
+using EasyAbp.CacheManagement;
 using EasyAbp.CacheManagementDemo.MultiTenancy;
 using EasyAbp.CacheManagementDemo.ObjectExtending;
 using Volo.Abp.AuditLogging;
@@ -12,6 +12,7 @@ using Volo.Abp.PermissionManagement.Identity;
 using Volo.Abp.PermissionManagement.IdentityServer;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
+using Volo.Blogging;
 
 namespace EasyAbp.CacheManagementDemo
 {
@@ -29,6 +30,7 @@ namespace EasyAbp.CacheManagementDemo
         typeof(CacheManagementStackExchangeRedisModule),
         typeof(AbpTenantManagementDomainModule)
         )]
+    [DependsOn(typeof(BloggingDomainModule))]
     public class CacheManagementDemoDomainModule : AbpModule
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)

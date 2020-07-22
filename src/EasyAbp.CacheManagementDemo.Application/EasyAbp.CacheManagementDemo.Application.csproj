@@ -14,11 +14,13 @@
 
   <ItemGroup>
     <PackageReference Include="EasyAbp.CacheManagement.Application" Version="0.1.8" />
-    <PackageReference Include="Volo.Abp.Account.Application" Version="2.9.0" />
-    <PackageReference Include="Volo.Abp.Identity.Application" Version="2.9.0" />
-    <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="2.9.0" />
-    <PackageReference Include="Volo.Abp.TenantManagement.Application" Version="2.9.0" />
-    <PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="2.9.0" />
+    <PackageReference Include="Volo.Abp.Account.Application" Version="3.0.4" />
+    <PackageReference Include="Volo.Abp.Identity.Application" Version="3.0.4" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="3.0.4" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Application" Version="3.0.4" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="3.0.4" />
+    <PackageReference Include="Volo.Blogging.Admin.Application" Version="3.0.4" />
+    <PackageReference Include="Volo.Blogging.Application" Version="3.0.4" />
   </ItemGroup>
 
 </Project>

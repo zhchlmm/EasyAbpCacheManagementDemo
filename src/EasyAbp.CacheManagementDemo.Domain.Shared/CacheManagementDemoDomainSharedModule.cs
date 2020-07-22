@@ -1,4 +1,4 @@
-﻿using EasyAbp.CacheManagement;
+using EasyAbp.CacheManagement;
 using EasyAbp.CacheManagementDemo.Localization;
 using Volo.Abp.AuditLogging;
 using Volo.Abp.BackgroundJobs;
@@ -12,6 +12,7 @@ using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.Validation.Localization;
 using Volo.Abp.VirtualFileSystem;
+using Volo.Blogging;
 
 namespace EasyAbp.CacheManagementDemo
 {
@@ -26,6 +27,7 @@ namespace EasyAbp.CacheManagementDemo
         typeof(CacheManagementDomainSharedModule),
         typeof(AbpTenantManagementDomainSharedModule)
         )]
+    [DependsOn(typeof(BloggingDomainSharedModule))]
     public class CacheManagementDemoDomainSharedModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
