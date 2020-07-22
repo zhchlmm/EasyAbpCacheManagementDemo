@@ -260,3 +260,4 @@ src/EasyAbp.CacheManagementDemo.HttpApi.HostWithIds/Logs/*
 src/EasyAbp.CacheManagementDemo.DbMigrator/Logs/*
 
 /src/EasyAbp.CacheManagementDemo.Web/wwwroot/libs/
+/src/EasyAbp.CacheManagementDemo.Web/package-lock.json
